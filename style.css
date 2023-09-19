@@ -1,0 +1,407 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans'; /*'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #333; /* Set the background color of the sticky navbar */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Add a high z-index to ensure it's on top of other elements */
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: space-between; /* Align items to the right side */
+    align-items: center; /* Vertically center items */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+    font-size: 20px;
+    color: rgb(23, 60, 108);
+    font-weight: bold;
+    /*border: 1px solid #333; /*border around the navigation buttons!*/
+    border-radius: 5px; /* Add rounded corners */
+    padding: 5px 15px; /* Add padding to create a button-like appearance */
+    transition: background-color 0.3s, transform 0.2s, color 0.3s, border-color 0.3s; /* Smooth transitions for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: transparent; /*rgb(23, 60, 108); /* Change background color on hover */
+    color: rgb(23, 60, 108); /* Change text color on hover */
+    border-color: #333; /* Change border color on hover */
+    transform: scale(1.5); /* Enlarge the button on hover */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 50px; /* Add margin to increase space between navigation items */
+}
+
+/* Logo Styles */
+.logo-image {
+    max-width: 50px; /* Adjust the max-width as needed to fit your logo */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* Add padding to sections with the "section" class to account for the fixed navigation bar */
+.section {
+    background-color: #f2f2f2; /* Same background color as the navigation bar */
+    color: #333; /* Same text color as the navigation bar */
+    padding-top: 80px; /* Adjust the value as needed */
+}
+
+.custom-hr {
+    margin-bottom: 50hr !important; /* Adjust the value to increase or decrease the gap */
+}
+
+/* Hero Section Styles */
+.jumbotron {
+    position: relative;
+    padding: 15rem 0; /* Increase the top and bottom padding to make it larger */
+    color: rgb(23, 60, 108); /* Change text color to navy */
+    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background image and blur effect */
+.jumbotron::before {
+    content: "";
+    background-image: url('images/Wazhma-profil-final.png'); /* Replace 'path-to-your-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Add a blur effect to the background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the background behind the content */
+}
+
+/* Background Image with Gradient Filter */
+.hero-background {
+    background-image: url('images/Wazhma-profil-final.png'); /* Add your image path here */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fix the background image */
+    background-position: center bottom; /* Center the image horizontally and vertically */
+    filter: blur(10px); /* Apply a 5px blur effect to the background image */
+    position: absolute; /* Position the background element */
+    top: 0; /* Align it to the top of the section */
+    left: 0; /* Align it to the left of the section */
+    width: 100%; /* Make it cover the entire section */
+    height: 100%; /* Make it cover the entire section */
+    z-index: -1; /* Place it behind other content */
+
+    /* Create a linear gradient background overlay */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*background: linear-gradient(to right, rgba(169, 169, 169, 0.5), rgba(105, 105, 105, 0.8));*/
+
+
+        /*background: linear-gradient(to left, rgba(173, 216, 230, 0.2) 0%, rgba(173, 216, 230, 0.5) 100%);*/
+        /*background: linear-gradient(to right, rgba(173, 216, 230, 0.2) 0%, rgba(173, 216, 230, 0.5) 100%);*/
+        background: linear-gradient(to right, rgba(173, 216, 230, 0.1) 0%, rgba(173, 216, 230, 0.4) 100%);
+
+
+    }
+}
+
+
+/* Apply word-wrap to limit text to 10 words per line */
+#text-container-us,
+#text-container-srv {
+    word-wrap: break-word;
+    max-width: 40em; /* Optional: Set a maximum width for the container */
+    margin-bottom: 10px;
+}
+
+/* Custom Button Styles */
+.custom-btn1,
+.custom-btn2 {
+    background-color: rgb(24, 39, 68); /* Dark blue background for custom buttons */
+    color: lightgray; /* White text color */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-decoration: none; /* Remove underline from buttons */
+    display: inline-block; /* Make buttons inline-block elements */
+    transition: background-color 0.3s, transform 0.2s, color 0.3s, border-color 0.3s; /* Smooth transitions for hover effect */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.custom-btn1:hover,
+.custom-btn2:hover {
+    background-color: rgb(24, 39, 68); /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    border-color: #000; /* Change border color on hover */
+    transform: scale(1.2); /* Enlarge the button on hover */
+    transition: background-color 0.3s, transform 0.2s, color 0.3s, border-color 0.3s; /* Smooth transitions for hover effect */
+}
+
+/* Change the color of hyperlinks */
+a {
+    color: white; /* Set the default hyperlink color */
+}
+
+a:hover {
+    color: black; /* Change hyperlink color on hover */
+}
+
+/* Logo Styles */
+.img-fluid {
+    max-width: 80%;
+    height: auto;
+    margin-left: -10rem; /* Add some spacing between logo and content */
+    margin-top: 0rem;
+}
+
+/* Adjust the background color for specific sections */
+#about,
+#services,
+#staff,
+#contact {
+    background-color: rgb(23, 60, 108);/*#f8f9fa; /* Background color for these sections */
+    color: white; /* Text color for these sections */
+
+}
+
+
+.about-image-frame,
+.services-image-frame {
+    border-radius: 20px; /* Rounded corners for image frames */
+    filter: blur(10px);
+}
+
+.about-image-frame img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+.services-image-frame img {
+    max-width: 60%; /* Ensure images don't exceed frame size */
+    border-radius: 20px;
+}
+
+/* White Horizontal Line */
+/*.white-horizontal-line {
+    width: 100%;
+    height: 20px;
+    background-color: white; /* White horizontal line */
+    /*margin: 0rem 0;
+}
+
+/* Services Section Styles */
+#services {
+    padding: 4rem 0;
+}
+
+.card {
+    border: 1px solid #ccc; /* Add a border to each service box */
+    transition: transform 0.3s; /* Smooth transformation on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Enlarge card on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 2rem; /* Add margin for smaller screens */
+    }
+}
+
+/* Styling for the service list items */
+.service-list li {
+    margin-bottom: 5px; /* Add space between service list items */
+}
+
+/* Center-align text in the table elements */
+.table-transparent thead th,
+.table-transparent tbody td {
+    text-align: center;
+}
+
+/* Custom CSS to make the table transparent */
+.table-transparent {
+    background-color: transparent;
+    border-collapse: collapse;
+}
+
+.table-transparent th,
+.table-transparent td {
+    border: none; /* Remove borders from table cells */
+    padding: 5px 15px; /* Adjust cell padding as needed */
+    text-align: left; /* Adjust text alignment as needed */
+}
+
+/* Center-align the h3 element above the table */
+.service-table h3 {
+    text-align: center;
+}
+
+/* Staff Section Styles */
+#staff {
+    padding: 4rem 0;
+}
+
+.staff-member {
+    margin-bottom: 3rem; /* Add space between staff members */
+}
+
+.border-square {
+    border: 2px solid #ccc; /* Border style for square elements */
+    width: 400px; /* Fixed width for square elements */
+    height: 300px; /* Fixed height for square elements */
+    padding: 15px; /* Add padding inside square elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center; /* Vertically center content */
+}
+
+.border-square img {
+    max-width: 150px; /* Adjust image size */
+    margin-bottom: 10px; /* Add space below images */
+    border: 2px solid #ccc; /* Border for images */
+}
+
+/* Center the Google Map within the contact section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Adjust the height as needed */
+}
+
+/* Add this CSS to your existing styles */
+/*.hover-effect:hover {
+    font-size: 20px; /* Adjust the font size as needed */
+/*    transition: font-size 0.3s; /* Smooth transition for font size */
+/*    color: red
+/*}*/
+
+.test-container {
+    border: 2px solid black; /* Add a 2px black border around the map */
+    display: inline-block; /* Ensure the container only takes the necessary width */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3); /* Add shadow if needed */
+    overflow: hidden; /* Ensure the border doesn't affect the map dimensions */
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 4rem 0;
+}
+
+/* Add shadow to the map iframe */
+.map-iframe {
+    /*border: 10px solid rgba(0, 0, 0, 0.3); /* Create a 3D border with shadow */
+    /*padding: 10px; /* Add padding to separate the border from the map */
+    /*box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+    box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.3); /* Remove the previous box shadow */
+    border: 1px solid black; /* Add a 2px black border around the map */
+    filter: invert(0%); /* Adjust map appearance */
+    width: 100%;
+}
+
+
+/* Add padding to sections when they are the target */
+section:target {
+    padding-top: 60px; /* Adjust the padding as needed */
+    padding-bottom: 60px;
+}
+
+/* Initial styles for the .fade-in class */
+.fade-in {
+    opacity: 0;
+    transform: translateY(0);
+    animation-name: fadeInAnimation;
+    animation-duration: 2s;
+}
+
+/* Define the animation */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Additional CSS for the active state */
+.active {
+    opacity: 1 !important; /* Override opacity for active elements */
+}
+
+/* Add animation and transition properties for text and image fading */
+.fade-in-text {
+    opacity: 0; /* Initially, set opacity to 0 for text */
+    animation: fadeInText 1s ease-in forwards; /* Apply fadeInText animation */
+}
+
+.fade-in-image {
+    opacity: 0; /* Initially, set opacity to 0 for images */
+    animation: fadeInImage 1s ease-in 2s forwards; /* Apply fadeInImage animation with a 2s delay */
+}
+
+.fade-in-text2 {
+    opacity: 0; /* Initially, set opacity to 0 for text */
+    animation: fadeInText 2s ease-in forwards; /* Apply fadeInText animation */
+}
+
+.fade-in-image2 {
+    opacity: 0; /* Initially, set opacity to 0 for images */
+    animation: fadeInImage 1s ease-in 3s forwards; /* Apply fadeInImage animation with a 2s delay */
+}
+
+/* Define the animations for text and image fading */
+@keyframes fadeInText {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+/* Initial styles for fade-in elements with left and right animations */
+.fade-in-left,
+.fade-in-right {
+    opacity: 0; /* Initially, set opacity to 0 */
+    transform: translateX(20px); /* Move elements 20px down initially */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Apply transition effects */
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(24, 39, 68); /* Dark gray background for the footer */
+    color: #fff; /* White text color */
+    padding: 1rem 0; /* Add padding to the footer */
+}
