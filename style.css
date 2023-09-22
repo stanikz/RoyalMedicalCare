@@ -78,7 +78,7 @@ body {
 /* Background image and blur effect */
 .jumbotron::before {
     content: "";
-    background-image: url('images/Wazhma-profil-final.png'); /* Replace 'path-to-your-image.jpg' with the path to your image */
+    background-image: url('images/wazhma/Wazhma-profil-final.png'); /* Replace 'path-to-your-image.jpg' with the path to your image */
     background-size: cover;
     background-position: center;
     filter: blur(10px); /* Add a blur effect to the background image */
@@ -92,7 +92,7 @@ body {
 
 /* Background Image with Gradient Filter */
 .hero-background {
-    background-image: url('images/Wazhma-profil-final.png'); /* Add your image path here */
+    background-image: url('images/wazhma/Wazhma-profil-final.png'); /* Add your image path here */
     background-size: cover; /* Ensure the image covers the entire background */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Fix the background image */
