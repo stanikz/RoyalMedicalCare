@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - Royal Medical Care Sweden AB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!--Standard web browser favicon-->
+    <!--link rel="icon" href="images/favicon/logo-32x32.png" type="image/x-icon"-->
+    <!-- iOS home screen icon -->
+    <link rel="icon-iOS" sizes="180x180" href="images/favicon/logo-iOS-180x180.png">
+    <!-- Android home screen icon -->
+    <link rel="icon-andriod" sizes="192x192" href="images/favicon/logo-andriod-192x192.png">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f2f2f2;">
+    <div class="container">
+        <!--a class="navbar-brand" href="#">Royal Medical Care Sweden AB</a>-->
+        <a class="navbar-brand" href="index.html#home"><img src="images/favicon/logo-without-bg-original.png" alt="royal-medical-care-logo" class="logo-image"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#home">Hem</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contact Form with Logo on the Right -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Your contact form content goes here -->
+            <form id="contactForm" action="process_form.php" method="post">
+                <!-- Form fields go here -->
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="name" class="contact-labels">Namn:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                        <div id="nameError" class="error-message"></div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="personnr" class="contact-labels">Personnummer:</label>
+                        <input type="text" class="form-control" id="personnr" name="personnr" required>
+                        <div id="personnrError" class="error-message"></div>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label for="email" class="contact-labels">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div id="emailError" class="error-message"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group col-md-8">
+                    <label for="message" class="contact-labels">Meddelande:</label>
+                    <textarea class="form-control" id="message" name="message" rows="8" required></textarea>
+                    <div id="messageError" class="error-message"></div>
+                </div>             
+                <!-- Add small spacing below the message field -->
+                <div class="form-group col-md-8 mb-3"></div>
+
+                <button type="submit" class="btn custom-btn2">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-6 text-center">
+            <!-- Your large logo goes here -->
+            <img src="images/logo.png" alt="your-logo" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<div class="privacy-policy-container">
+    <h4>Personuppgiftspolicy</h4>
+    <p>
+        Vi på Hedda Care arbetar med att utveckla vården dagligen. I samband med att du söker vård hos oss ger du samtycke till hantering av personuppgifter. 
+        För oss kommer du som patient i första hand och vi värnar om din integritet och skyddar på så vis dina uppgifter vid användning av våra tjänster.
+    </p>
+
+    <ul>
+        <li>
+            <h5>Vilka personuppgifter vi behandlar</h5>
+            <p>
+                För att kunna erbjuda våra tjänster på ett korrekt och kundanpassat sätt så behöver kundinformation samlas in och sparas. 
+                Vi behöver använda dina uppgifter för att säkerställa din identitet och kunna kommunicera med dig som patient gällande dina ärenden. 
+                Personuppgifter som sparas kan vara uppgift om namn, adress, ålder, kön, journaluppgifter, dokument med flera.
+            </p>
+        </li>
+
+        <!-- Repeat the structure for each numbered section -->
+
+        <li>
+            <h5>Ändamål för behandling</h5>
+            <p>
+                Som vårdgivare är vi skyldiga att använda dina patientuppgifter för att kunna föra en journal över din vård vilket är en legal skyldighet. 
+                Från och med att den sista anteckningen gjorts i din journal är vi enligt lag skyldiga att bevara journalhandlingarna i minst tio år.
+            </p>
+        </li>
+
+        <li>
+            <h5>Inhämtning av personuppgift</h5>
+            <p>
+                De personuppgifter som Hedda Care behandlar hämtas i regel när du som patient kontaktar oss. 
+                Vi kan komma att inhämta personuppgifter via Skatteverket för att kunna säkerställa din identitet samt underlätta vår kommunikation med dig. 
+                Vi kan även komma att inhämta personuppgifter via separata formulär digitalt eller manuellt, exempelvis via formulär på våra hemsidor eller via 1177.se. 
+                Dessa uppgifter kan komma att föras in i din datajournal om de bedöms nödvändiga för din vård.
+                Vid kommunikation genom kanaler så som e-post medger avsändaren ett eget ansvar i att informationen lämnas till mottagaren. 
+                Hedda Care rensar och raderar regelbundet information i aktuella kanaler och system för att personuppgifterna hanteras på ett så säkert sätt som möjligt.
+                Om du inte medger vår behandling av personuppgift kan vi komma att behöva neka dig vård då vi inte kan fullgöra vår lagstadgade skyldighet att journalföra.
+            </p>
+        </li>
+
+        <li>
+            <h5>Rättslig grund</h5>
+            <p>
+                Den lagliga grunden för personuppgiftsbehandlingen för detta syfte är nödvändig för att vi ska kunna fullgöra våra skyldigheter 
+                enligt vårt avtal med dig samt kunna tillhandahålla dig hälso- och sjukvård och för att vi ska kunna fullgöra våra rättsliga skyldigheter som vårdgivare,
+                samt nödvändig för att vi ska kunna uppfylla både ditt och vårt intresse att tillhandahålla dig support. 
+                Dina personuppgifter behandlas så länge ärendet löper och raderas därefter.
+                Vi kan även komma att behandla dina personuppgifter för att vi ska kunna fullgöra våra rättsliga förpliktelser enligt lag, 
+                domar eller myndighetsbeslut om det är något som krävs. Den lagliga grunden för personuppgiftsbehandlingen för detta syfte är 
+                nödvändig för att vi skall kunna fullgöra våra rättsliga förpliktelser.
+            </p>
+        </li>
+
+        <li>
+            <h5>Delning av personuppgifter</h5>
+            <p>
+                Vi kan komma att dela dina personuppgifter med de underleverantörer vi samarbetar med för att kunna utföra och/eller erbjuda våra tjänster. 
+                Samtliga av våra underleverantörer som hanterar personuppgifter får signera ett PUB-avtal. Konsulter räknas inte som underleverantörer utan som anställda.
+                Vår IT-support kan komma att behöva ta del av din personuppgift i de fall som den tekniska hanteringen kräver detta.
+                Vi förmedlar inte dina personuppgifter till tredje part utöver ovan formulering. Vår huvudregel är att personer som 
+                har behov av tillgång till dina personuppgifter för att kunna utföra sitt arbete också har tillgång till dem.
+            </p>
+        </li>
+
+        <li>
+            <h5>Vem är ansvarig för dina uppgifter?</h5>
+            <p>
+                Hos oss sker hanteringen av personuppgifter på ett sätt där vi i möjligaste mån endast använder de mest nödvändiga uppgifterna för att kunna 
+                fullfölja leveransen av våra tjänster till kunden. Personuppgiftsansvarig på Hedda Hela Livet är Cecilia Hansson. Kontakt: cecilia.hansson@heddacare.se
+                Om du har frågor eller synpunkter på hur vi behandlar dina personuppgifter i samband med användning av våra tjänster så är du varmt välkommen att kontakta oss.
+            </p>
+        </li>
+
+        <li>
+            <h5>Hur vi skyddar dina uppgifter</h5>
+            <p>
+                Vi har vidtagit lämpliga skyddsåtgärder för att skydda dina personuppgifter mot obehörig åtkomst, obehörigt utlämnande eller missbruk. 
+                Dina uppgifter lagras på platser som endast är tillgängliga för våra anställda som behöver uppgifterna för sin tjänsteutövning. 
+                Vi använder tekniska verktyg som skyddar dina personuppgifter väl och vår personal och anställda är utbildade i vikten av att 
+                upprätthålla säkerhet och sekretess i förhållande till de personuppgifter vi behandlar och alla har fått sekretessavtal och signerat dessa.
+                Som vårdgivare har vi även tystnadsplikt för personuppgifter som lagras i din patientjournal. 
+                Endast anställda på Hedda Care som behöver uppgifterna för att delta i din vård eller för att kunna utföra sitt arbete får ta del av dessa.
+                Informationssäkerhetsåtgärder har applicerats avseende e-posten. Detta innefattar åtgärder som till exempel att skydda e-posten från obehörig åtkomst från utomstående, 
+                att införa tydliga krav på användarnamn och lösenord samt att ha ett lösenord med hög säkerhet.
+            </p>
+        </li>
+
+        <li>
+            <h5>Förvaring</h5>
+            <p> Dina personuppgifter förvaras i regel enligt grundprinciperna nedan:
+                Journalhandling: Minst 10 år. <br>Detta inbegriper inlämnade journalhandlingar, remissvar, röntgensvar med mera. 
+                Vid önskemål om makulering av journalhandling, kontakta verksamhetschef för mottagningen.</br>
+                <br>E-post: 12 månader.</br>
+                <br>Telefoni: 6 månader.</br>
+                <br>Listningsbegäran: Minst 3 år.</br>
+                Kvitton: Enligt bokföringslag.
+                Hemsida: Se separat kakpolicy. För uppgifter du skickar till oss förvaras de enligt övriga punkter.
+            </p>
+        </li>
+    </ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<script src="contact_validation.js"></script> <!-- Your custom JavaScript for form validation -->
+
+</body>
+</html>
